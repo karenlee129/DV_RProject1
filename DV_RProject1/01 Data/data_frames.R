@@ -1,10 +1,3 @@
----
-  title: "DV_RProject1"
-author: "Ronly Leung, Karen Lee"
-date: "September 15, 2015"
-output: html_document
----
-
 require("jsonlite")
 require("RCurl")
 require(extrafont)
