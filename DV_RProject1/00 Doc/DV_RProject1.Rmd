@@ -16,25 +16,21 @@ require(ggplot2)
 
 ### Data Frame using SQL query "select * from titanic"
 ```{r}
-##source("C:/Users/ronly_000/Documents/utaustin/2015_fall/cs329e_elements_of_data_vis/DataVisualization/DV_RProject1/DV_RProject1/01 Data/DF_1.R", echo = TRUE)
 source("../01 Data/DF_1.R", echo = TRUE)
 ```
 
 ### Data Frame using SQL query "select * from titanic where sex is not null"
 ```{r}
-##("C:/Users/ronly_000/Documents/utaustin/2015_fall/cs329e_elements_of_data_vis/DataVisualization/DV_RProject1/DV_RProject1/01 Data/DF_2.R", echo = TRUE)
 source("../01 Data/DF_2.R", echo = TRUE)
 ```
 
 ### Data Frame using SQL query "select * from titanic where age <= 10"
 ```{r}
-##source("C:/Users/ronly_000/Documents/utaustin/2015_fall/cs329e_elements_of_data_vis/DataVisualization/DV_RProject1/DV_RProject1/01 Data/DF_3.R", echo = TRUE)
 source("../01 Data/DF_3.R", echo = TRUE)
 ```
 
 ### Data Frame using SQL query "select * from titanic where age > 50"
 ```{r}
-##source("C:/Users/ronly_000/Documents/utaustin/2015_fall/cs329e_elements_of_data_vis/DataVisualization/DV_RProject1/DV_RProject1/01 Data/DF_4.R", echo = TRUE)
 source("../01 Data/DF_4.R", echo = TRUE)
 ```
 
