@@ -43,6 +43,8 @@ source("../02 Visualizations/DV_1.R", echo = TRUE)
 
 * SQL Query: select * from titanic  
 * This visualization shows each passenger's fare based on his/her age and sex (sex can be null).
+* The x-axis is the age of the passengers, y-axis is the fare paid by the passenger, and the legend is sex (sex can be null).
+* This graph did not require any facets.
 
 ## Visualization 2
 
@@ -52,6 +54,8 @@ source("../02 Visualizations/DV_2.R", echo = TRUE)
 
 * SQL Query: select * from titanic where sex is not null  
 * This visualization shows each passenger's fare based on his/her age and sex (sex can't be null).
+* The x-axis is the age of the passengers, y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
+* This graph did not require any facets.
 
 ## Visualization 3
 
@@ -61,6 +65,8 @@ source("../02 Visualizations/DV_3.R", echo = TRUE)
 
 * SQL Query: select * from titanic where sex is not null  
 * This visualization shows whether each passenger survived or not vs their fare, with the x-axis separated by sex.
+* The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is the survival status.
+* This graph did not require any facets.
 
 ## Visualization 4
 
@@ -69,7 +75,9 @@ source("../02 Visualizations/DV_4.R", echo = TRUE)
 ```
 
 * SQL Query: select * from titanic where sex is not null  
-* This visualization categorizes passengers by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex. 
+* This visualization categorizes passengers by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex.
+* The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
+* This graph did use a facet which split the graphs into SURVIVED and PCLASS.
 
 ## Visualization 5
 
@@ -78,7 +86,9 @@ source("../02 Visualizations/DV_5.R", echo = TRUE)
 ```
 
 * SQL Query: select * from titanic where age <= 10  
-* This visualization also categorizes passengers, 10 years and younger, by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex. 
+* This visualization also categorizes passengers, 10 years and younger, by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex.
+* The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
+* This graph did use a facet which split the graphs into SURVIVED and PCLASS.
 
 ## Our Own Creation!
 
@@ -88,4 +98,6 @@ source("../02 Visualizations/DV_6.R", echo = TRUE)
 
 * SQL Query: select * from titanic where age > 50  
 * This visualization compares the age and survival status of passengers over the age of 50. The graph separates the passengers by sex.
+* The x-axis is divided by sex (male and female), y-axis is the age of the passenger, and the legend is the survival status.
+* This graph did not require any facets.
 
