@@ -41,10 +41,21 @@ source("../01 Data/DF_4.R", echo = TRUE)
 source("../02 Visualizations/DV_1.R", echo = TRUE)
 ```
 
-* SQL Query: select * from titanic  
-* This visualization shows each passenger's fare based on his/her age and sex (sex can be null).
-* The x-axis is the age of the passengers, y-axis is the fare paid by the passenger, and the legend is sex (sex can be null).
-* This graph did not require any facets.
+1. SQL Query: select * from titanic  
+2. Use Cartesian coordinates
+3. X and Y scales are both continuous
+4. Set title to "Titanic"
+5. Set x-axis to "Age" and y-axis to "Fare"
+6. Create a layer
+* use df1
+* X is Age, Y is Fare, Color is Sex
+* set stat to "identity"
+* set geom to "point"
+* use jitter (width=0.3, height=0)
+
+This visualization shows each passenger's fare based on his/her age and sex (sex can be null).
+The x-axis is the age of the passengers, y-axis is the fare paid by the passenger, and the legend is sex (sex can be null).
+This graph did not require any facets.
 
 ## Visualization 2
 
@@ -52,10 +63,21 @@ source("../02 Visualizations/DV_1.R", echo = TRUE)
 source("../02 Visualizations/DV_2.R", echo = TRUE)
 ```
 
-* SQL Query: select * from titanic where sex is not null  
-* This visualization shows each passenger's fare based on his/her age and sex (sex can't be null).
-* The x-axis is the age of the passengers, y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
-* This graph did not require any facets.
+1. SQL Query: select * from titanic where sex is not null  
+2. Use Cartesian coordinates
+3. X and Y scales are both continuous
+4. Set title to "Titanic"
+5. Set x-axis to "Age" and y-axis to "Fare"
+6. Create a layer
+* use df2
+* X is Age, Y is Fare, Color is Sex
+* set stat to "identity"
+* set geom to "point"
+* use jitter (width=0.3, height=0)
+
+This visualization shows each passenger's fare based on his/her age and sex (sex can't be null).
+The x-axis is the age of the passengers, y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
+This graph did not require any facets.
 
 ## Visualization 3
 
@@ -63,10 +85,21 @@ source("../02 Visualizations/DV_2.R", echo = TRUE)
 source("../02 Visualizations/DV_3.R", echo = TRUE)
 ```
 
-* SQL Query: select * from titanic where sex is not null  
-* This visualization shows whether each passenger survived or not vs their fare, with the x-axis separated by sex.
-* The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is the survival status.
-* This graph did not require any facets.
+1. SQL Query: select * from titanic where sex is not null  
+2. Use Cartesian coordinates
+3. X scale is discrete, y scale is continuous
+4. Set title to "Titanic"
+5. Set x-axis to "Survived" and y-axis to "Fare"
+6. Create a layer
+* use df2
+* X is Sex, Y is Fare, Color is Survived
+* set stat to "identity"
+* set geom to "point"
+* use jitter (width=0.3, height=0)
+
+This visualization shows whether each passenger survived or not vs their fare, with the x-axis separated by sex.
+The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is the survival status.
+This graph did not require any facets.
 
 ## Visualization 4
 
@@ -74,10 +107,22 @@ source("../02 Visualizations/DV_3.R", echo = TRUE)
 source("../02 Visualizations/DV_4.R", echo = TRUE)
 ```
 
-* SQL Query: select * from titanic where sex is not null  
-* This visualization categorizes passengers by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex.
-* The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
-* This graph did use a facet which split the graphs into SURVIVED and PCLASS.
+1. SQL Query: select * from titanic where sex is not null  
+2. Use Cartesian coordinates
+3. X scale is discrete, y scale is continuous
+4. use a facet (with a label) to divide passengers by class
+5. Set title to "Titanic"
+6. Set x-axis to "Survived" and y-axis to "Fare"
+7. Create a layer
+* use df2
+* X is Sex, Y is Fare, Color is Sex
+* set stat to "identity"
+* set geom to "point"
+* use jitter (width=0.3, height=0)
+
+This visualization categorizes passengers by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex.
+The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
+This graph did use a facet which split the graphs into SURVIVED and PCLASS.
 
 ## Visualization 5
 
@@ -85,10 +130,22 @@ source("../02 Visualizations/DV_4.R", echo = TRUE)
 source("../02 Visualizations/DV_5.R", echo = TRUE)
 ```
 
-* SQL Query: select * from titanic where age <= 10  
-* This visualization also categorizes passengers, 10 years and younger, by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex.
-* The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
-* This graph did use a facet which split the graphs into SURVIVED and PCLASS.
+1. SQL Query: select * from titanic where age <= 10
+2. Use Cartesian coordinates
+3. X scale is discrete, y scale is continuous
+4. use a facet (with a label) to divide passengers by class
+5. Set title to "Titanic where age <= 10"
+6. Set x-axis to "Survived" and y-axis to "Fare"
+7. Create a layer
+* use df3
+* X is Sex, Y is Fare, Color is Sex
+* set stat to "identity"
+* set geom to "point"
+* use jitter (width=0.3, height=0)
+
+This visualization also categorizes passengers, 10 years and younger, by class and survival status, resulting in 6 different graphs. Each graph plots fare to sex.
+The x-axis is divided by sex (male and female), y-axis is the fare paid by the passenger, and the legend is sex (excluding sex as null).
+This graph did use a facet which split the graphs into SURVIVED and PCLASS.
 
 ## Our Own Creation!
 
@@ -96,8 +153,19 @@ source("../02 Visualizations/DV_5.R", echo = TRUE)
 source("../02 Visualizations/DV_6.R", echo = TRUE)
 ```
 
-* SQL Query: select * from titanic where age > 50  
-* This visualization compares the age and survival status of passengers over the age of 50. The graph separates the passengers by sex.
-* The x-axis is divided by sex (male and female), y-axis is the age of the passenger, and the legend is the survival status.
-* This graph did not require any facets.
+1. SQL Query: select * from titanic where age > 50
+2. Use Cartesian coordinates
+3. X scale is discrete, y scale is continuous
+5. Set title to "Titanic where age > 50"
+6. Set x-axis to "Survived" and y-axis to "Age
+7. Create a layer
+* use df4
+* X is Sex, Y is Age, color is Survived
+* set stat to "identity"
+* set geom to "point"
+* use jitter (width=0.3, height=0)
+
+This visualization compares the age and survival status of passengers over the age of 50. The graph separates the passengers by sex.
+The x-axis is divided by sex (male and female), y-axis is the age of the passenger, and the legend is the survival status.
+This graph did not require any facets.
 
